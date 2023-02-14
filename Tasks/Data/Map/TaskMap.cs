@@ -12,6 +12,8 @@ namespace Tasks.Data.Map
             builder.Property(x => x.Name).IsRequired().HasMaxLength(64);
             builder.Property(x => x.Description).IsRequired().HasMaxLength(1024);
             builder.Property(x => x.State).IsRequired();
+            builder.Property(x => x.UserId);
+            builder.HasOne(x => x.User);
         }
     }
 }

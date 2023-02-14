@@ -24,6 +24,7 @@ namespace Tasks
                 );
 
             builder.Services.AddScoped<IUser, UserRepositorie>();
+            builder.Services.AddScoped<ITask, TaskRepositorie>();
 
             var app = builder.Build();
 

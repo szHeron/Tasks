@@ -9,5 +9,7 @@ namespace Tasks.Models
         public string? Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public TaskState State { get; set; }
+        public Guid? UserId { get; set; }
+        public virtual UserModel? User { get; set; }
     }
 }
